@@ -2,4 +2,5 @@
   <Folder Name="/Solution Items/">
     <File Path=".editorconfig" />
   </Folder>
+  <Project Path="src/IPLocateNet.Domain/IPLocateNet.Domain.csproj" Id="237b1dc7-9f9f-4d4a-bd54-4e3372630332" />
 </Solution>
