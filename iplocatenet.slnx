@@ -2,5 +2,9 @@
   <Folder Name="/Solution Items/">
     <File Path=".editorconfig" />
   </Folder>
+  <Project Path="src/IPLocateNet.App/IPLocateNet.App.csproj" Id="dce9f035-d99a-4f51-a036-0f0b43e47c4c" />
   <Project Path="src/IPLocateNet.Domain/IPLocateNet.Domain.csproj" Id="237b1dc7-9f9f-4d4a-bd54-4e3372630332" />
+  <Project Path="src/IPLocateNet.Inf.Data.DI/IPLocateNet.Inf.Data.DI.csproj" />
+  <Project Path="src/IPLocateNet.Inf.Data/IPLocateNet.Inf.Data.csproj" Id="a49c18d8-8d63-4993-a254-8e6df8219230" />
+  <Project Path="src/IPLocateNet.Inf.Logging/IPLocateNet.Inf.Logging.csproj" Id="48fea8f8-db02-4ebf-ae0c-105ec9a8ed76" />
 </Solution>

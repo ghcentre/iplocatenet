@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IPLocateNet.App\IPLocateNet.App.csproj" />
+    <ProjectReference Include="..\IPLocateNet.Inf.Data\IPLocateNet.Inf.Data.csproj" />
+  </ItemGroup>
+
+</Project>
