@@ -7,4 +7,5 @@
   <Project Path="src/IPLocateNet.Inf.Data.DI/IPLocateNet.Inf.Data.DI.csproj" />
   <Project Path="src/IPLocateNet.Inf.Data/IPLocateNet.Inf.Data.csproj" Id="a49c18d8-8d63-4993-a254-8e6df8219230" />
   <Project Path="src/IPLocateNet.Inf.Logging/IPLocateNet.Inf.Logging.csproj" Id="48fea8f8-db02-4ebf-ae0c-105ec9a8ed76" />
+  <Project Path="src/IPLocateNet.Updater/IPLocateNet.Updater.csproj" Id="a68c5741-0002-4a63-b153-53dad6ca5b07" />
 </Solution>
