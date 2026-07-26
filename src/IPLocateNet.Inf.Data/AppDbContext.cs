@@ -17,5 +17,5 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
 
     public DbSet<Sovereignty> Sovereignties => Set<Sovereignty>();
     public DbSet<Country> Countries => Set<Country>();
-    public DbSet<IpV4Range> IpV4Ranges => Set<IpV4Range>();
+    public DbSet<IPv4Range> IPv4Ranges => Set<IPv4Range>();
 }
