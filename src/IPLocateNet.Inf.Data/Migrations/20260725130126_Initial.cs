@@ -45,7 +45,7 @@ namespace IPLocateNet.Inf.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "IpV4Ranges",
+                name: "IPv4Ranges",
                 columns: table => new
                 {
                     StartingIP = table.Column<byte[]>(type: "BLOB", nullable: false),
@@ -54,9 +54,9 @@ namespace IPLocateNet.Inf.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_IpV4Ranges", x => x.StartingIP);
+                    table.PrimaryKey("PK_IPv4Ranges", x => x.StartingIP);
                     table.ForeignKey(
-                        name: "FK_IpV4Ranges_Countries_CountryId",
+                        name: "FK_IPv4Ranges_Countries_CountryId",
                         column: x => x.CountryId,
                         principalTable: "Countries",
                         principalColumn: "Id",
@@ -347,8 +347,8 @@ namespace IPLocateNet.Inf.Data.Migrations
                 column: "SovereigntyId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_IpV4Ranges_CountryId",
-                table: "IpV4Ranges",
+                name: "IX_IPv4Ranges_CountryId",
+                table: "IPv4Ranges",
                 column: "CountryId");
         }
 
@@ -356,7 +356,7 @@ namespace IPLocateNet.Inf.Data.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "IpV4Ranges");
+                name: "IPv4Ranges");
 
             migrationBuilder.DropTable(
                 name: "Countries");

@@ -1784,7 +1784,7 @@ namespace IPLocateNet.Inf.Data.Migrations
                         });
                 });
 
-            modelBuilder.Entity("IPLocateNet.Domain.IpV4Range", b =>
+            modelBuilder.Entity("IPLocateNet.Domain.IPv4Range", b =>
                 {
                     b.Property<byte[]>("StartingIP")
                         .HasColumnType("BLOB");
@@ -1801,7 +1801,7 @@ namespace IPLocateNet.Inf.Data.Migrations
 
                     b.HasIndex("CountryId");
 
-                    b.ToTable("IpV4Ranges");
+                    b.ToTable("IPv4Ranges");
                 });
 
             modelBuilder.Entity("IPLocateNet.Domain.Sovereignty", b =>
@@ -1906,7 +1906,7 @@ namespace IPLocateNet.Inf.Data.Migrations
                     b.Navigation("Sovereignty");
                 });
 
-            modelBuilder.Entity("IPLocateNet.Domain.IpV4Range", b =>
+            modelBuilder.Entity("IPLocateNet.Domain.IPv4Range", b =>
                 {
                     b.HasOne("IPLocateNet.Domain.Country", "Country")
                         .WithMany()
