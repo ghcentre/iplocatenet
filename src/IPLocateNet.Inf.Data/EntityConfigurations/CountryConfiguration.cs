@@ -9,7 +9,7 @@ internal sealed class CountryConfiguration : IEntityTypeConfiguration<Country>
     public void Configure(EntityTypeBuilder<Country> builder)
     {
         builder.Property(x => x.Id)
-            .HasConversion(x => x.Value, x => new CountryCode2(x))
+            .HasConversion(x => x.Value, x => new CountryId(x))
             .IsRequired();
 
         builder.Property(x => x.Name)

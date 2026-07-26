@@ -13,7 +13,7 @@ internal static class CountrySovereigntySeeder
                 (x, i) =>
                 new
                 {
-                    Id = new CountryCode2(x.Code2),
+                    Id = new CountryId(x.Code2),
                     Name = new CountryName(x.Name),
                     SovereigntyId = new SovereigntyId((ushort)sovereigntyMap[x.Sovereignty]),
                     Code3 = new CountryCode3(x.Code3)
