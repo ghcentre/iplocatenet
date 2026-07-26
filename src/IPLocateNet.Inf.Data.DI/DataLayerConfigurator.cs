@@ -6,7 +6,7 @@ namespace IPLocateNet.Inf.Data.DI;
 
 public static class DataLayerConfigurator
 {
-    public static void ConfigureServices(IServiceCollection services, Func<string?> connectionStringFactory)
+    public static void ConfigureServices(IServiceCollection services, bool isDevelopmentEnvironment, Func<string?> connectionStringFactory)
     {
         services.AddDbContext<AppDbContext>(
             (sp, options) =>
@@ -16,11 +16,13 @@ public static class DataLayerConfigurator
                     throw new InvalidAppConfigurationException("Connection string is empty.");
                 }
 
-                options.UseSqlite(
-                    connectionString,
-                    options =>
-                    {
-                    });
+                options.UseSqlite(connectionString);
+
+                if (isDevelopmentEnvironment)
+                {
+                    options.EnableSensitiveDataLogging();
+                    options.EnableDetailedErrors();
+                }
             });
     }
 
