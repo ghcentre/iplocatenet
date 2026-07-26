@@ -23,11 +23,9 @@ internal class Program
         {
             await ConfigureHostAsync(host);
 
-            logger.LogTrace("Trace");
-            logger.LogDebug("Debug");
-            logger.LogInformation("Information");
-            logger.LogWarning("Warning");
-            logger.LogError("Error");
+            using var scope = host.Services.CreateScope();
+            var worker = scope.ServiceProvider.GetRequiredService<Worker>();
+            await worker.RunAsync(CancellationToken.None);
 
             return ExitCode.Success;
         }
@@ -41,8 +39,9 @@ internal class Program
     private static void ConfigureServices(IServiceCollection services, ConfigurationManager configuration, IHostEnvironment env)
     {
         configuration.SetBasePath(Directory.GetCurrentDirectory());
-        DataLayerConfigurator.ConfigureServices(services, () => configuration.GetConnectionString("Default"));
+        DataLayerConfigurator.ConfigureServices(services, env.IsDevelopment(), () => configuration.GetConnectionString("Default"));
         LoggingConfigurator.ConfigureServices(services, configuration);
+        services.AddTransient<Worker>();
     }
 
     private static async Task ConfigureHostAsync(IHost host)
