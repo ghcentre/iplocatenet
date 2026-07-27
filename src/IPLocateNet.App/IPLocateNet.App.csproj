@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\IPLocateNet.Domain\IPLocateNet.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

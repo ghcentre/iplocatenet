@@ -1,4 +1,5 @@
 ﻿using IPLocateNet.App.Exceptions;
+using IPLocateNet.Inf.Data.LocalRepositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -24,6 +25,8 @@ public static class DataLayerConfigurator
                     options.EnableDetailedErrors();
                 }
             });
+
+        services.AddScoped<IPv4RangeRepository>();
     }
 
     public static async Task ConfigureHostAsync(IServiceProvider sp)

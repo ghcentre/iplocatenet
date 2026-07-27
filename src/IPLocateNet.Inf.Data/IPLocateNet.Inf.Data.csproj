@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\IPLocateNet.App\IPLocateNet.App.csproj" />
     <ProjectReference Include="..\IPLocateNet.Domain\IPLocateNet.Domain.csproj" />
   </ItemGroup>
 
