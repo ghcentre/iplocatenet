@@ -64,6 +64,8 @@ public class IPv4Address : IPAddress, IComparable, IComparable<IPv4Address>, IEq
 
     #endregion
 
+    #region Equals, GetHashCode, ToString
+
     public override bool Equals([NotNullWhen(true)] object? comparand)
     {
         return comparand is IPv4Address ipv4Address && Equals(ipv4Address);
@@ -78,6 +80,8 @@ public class IPv4Address : IPAddress, IComparable, IComparable<IPv4Address>, IEq
     {
         return base.ToString();
     }
+
+    #endregion
 
     #region IEquatable<IPv4Address>
 
