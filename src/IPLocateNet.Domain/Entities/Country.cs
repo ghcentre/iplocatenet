@@ -1,6 +1,6 @@
 ﻿using Ample.Core.GuardClauses;
 
-namespace IPLocateNet.Domain;
+namespace IPLocateNet.Domain.Entities;
 
 public class Country
 {

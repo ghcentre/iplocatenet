@@ -2,7 +2,7 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Net;
 
-namespace IPLocateNet.Domain;
+namespace IPLocateNet.Domain.Entities;
 
 public class IPv4Address : IPAddress, IComparable, IComparable<IPv4Address>, IEquatable<IPv4Address>
 {

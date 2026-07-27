@@ -1,4 +1,4 @@
-﻿using IPLocateNet.Domain;
+﻿using IPLocateNet.Domain.Entities;
 using IPLocateNet.Inf.Data.DataSeeders;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;

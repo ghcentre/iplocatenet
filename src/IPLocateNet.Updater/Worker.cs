@@ -1,4 +1,5 @@
 ﻿using IPLocateNet.Domain;
+using IPLocateNet.Domain.Entities;
 using IPLocateNet.Inf.Data;
 using Microsoft.EntityFrameworkCore;
 
