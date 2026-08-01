@@ -14,7 +14,7 @@ public class SpecificationIncludeEvaluator : ISpecificationEvaluator
 
     public static SpecificationIncludeEvaluator Default { get; } = new SpecificationIncludeEvaluator();
 
-    public IQueryable<T> GetQuery<T>(IQueryable<T> query, ISpecification<T> specification) where T : class
+    public IQueryable<T> GetQuery<T>(IQueryable<T> query, ISpecification<T> specification)
     {
         Guard.Against.Null(query);
         Guard.Against.Null(specification);

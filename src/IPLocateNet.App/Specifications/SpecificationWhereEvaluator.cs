@@ -10,7 +10,7 @@ public class SpecificationWhereEvaluator : ISpecificationEvaluator
 
     public static SpecificationWhereEvaluator Default { get; } = new SpecificationWhereEvaluator();
 
-    public IQueryable<T> GetQuery<T>(IQueryable<T> query, ISpecification<T> specification) where T : class
+    public IQueryable<T> GetQuery<T>(IQueryable<T> query, ISpecification<T> specification)
     {
         Guard.Against.Null(query);
         Guard.Against.Null(specification);

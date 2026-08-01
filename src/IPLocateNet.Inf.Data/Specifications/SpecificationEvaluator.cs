@@ -20,7 +20,7 @@ public class SpecificationEvaluator : ISpecificationEvaluator
 
     public static SpecificationEvaluator Default { get; } = new SpecificationEvaluator();
 
-    public virtual IQueryable<T> GetQuery<T>(IQueryable<T> query, ISpecification<T> specification) where T : class
+    public virtual IQueryable<T> GetQuery<T>(IQueryable<T> query, ISpecification<T> specification)
     {
         Guard.Against.Null(query);
         Guard.Against.Null(specification);

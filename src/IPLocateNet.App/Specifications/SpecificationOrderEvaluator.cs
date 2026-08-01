@@ -13,7 +13,7 @@ public class SpecificationOrderEvaluator : ISpecificationEvaluator
     
     public static SpecificationOrderEvaluator Default { get; } = new SpecificationOrderEvaluator();
 
-    public IQueryable<T> GetQuery<T>(IQueryable<T> query, ISpecification<T> specification) where T : class
+    public IQueryable<T> GetQuery<T>(IQueryable<T> query, ISpecification<T> specification)
     {
         Guard.Against.Null(query);
         Guard.Against.Null(specification);
