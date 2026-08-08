@@ -4,6 +4,6 @@ using IPLocateNet.Inf.Data.Repositories;
 
 namespace IPLocateNet.Inf.Data.LocalRepositories;
 
-public class IPv4RangeRepository(AppDbContext db, IUnitOfWork uow) : RepositoryBase<IPv4Range>(db, uow)
+public class CountryRepository(AppDbContext db, IUnitOfWork uow) : RepositoryBase<Country>(db, uow)
 {
 }
