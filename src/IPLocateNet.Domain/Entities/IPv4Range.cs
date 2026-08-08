@@ -20,7 +20,14 @@ public class IPv4Range
         }
     }
 
+    [Obsolete]
+    public void TempChangeEndingIP(IPv4Address ip) => EndingIP = Guard.Against.Null(ip);
+
     public IPv4Address StartingIP { get; private set; } = default!;
     public IPv4Address EndingIP { get; private set; } = default!;
     public Country Country { get; private set; } = default!;
+
+    public override string ToString() => $"{StartingIP}–{EndingIP} ({Country.Id})";
+    public override bool Equals(object? obj) => obj is IPv4Range other && StartingIP.Equals(other.StartingIP);
+    public override int GetHashCode() => StartingIP.GetHashCode();
 }

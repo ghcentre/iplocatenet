@@ -1,10 +1,11 @@
 ﻿using Ample.Core.GuardClauses;
+using System.Security.Cryptography;
 
 namespace IPLocateNet.Domain.Entities;
 
 public class Country
 {
-    private Country() {}
+    private Country() { }
 
     public Country(CountryId id, CountryName name, Sovereignty sovereignty, CountryCode3 code3)
     {
@@ -18,6 +19,10 @@ public class Country
     public CountryName Name { get; private set; } = default!;
     public Sovereignty Sovereignty { get; private set; } = default!;
     public CountryCode3 Code3 { get; private set; } = default!;
+
+    public override string ToString() => $"{Name} ({Id})";
+    public override bool Equals(object? obj) => obj is Country other && Id.Equals(other.Id);
+    public override int GetHashCode() => Id.GetHashCode();
 }
 
 public record CountryName

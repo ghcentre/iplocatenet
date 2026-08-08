@@ -14,6 +14,11 @@ public class Sovereignty
 
     public SovereigntyId Id { get; private set; }
     public SovereigntyName Name { get; private set; } = default!;
+
+    public override string ToString() => $"{Name}";
+    public override bool Equals(object? obj) => obj is Sovereignty other && Id.Equals(other.Id);
+    public override int GetHashCode() => Id.GetHashCode();
+
 }
 
 public readonly record struct SovereigntyId
